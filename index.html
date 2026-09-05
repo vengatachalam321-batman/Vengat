@@ -47,29 +47,8 @@
       <p class="note">You are my favorite line of code in this beautiful, unpredictable story.</p>
       <div class="answers"><button id="yes">Yes, always! ♡</button><button id="no" aria-label="No">No</button></div>
       <p class="hint" id="hint">Psst… one answer seems a little shy.</p>
-      <div class="celebration" id="celebration">You just made my whole universe sparkle! ✨<br>Our forever begins now. ♡</div>
-    </section>
-  </main>
-  <script>
-    const no = document.querySelector('#no'), yes = document.querySelector('#yes'), sky = document.querySelector('#sky'), hint = document.querySelector('#hint'), celebration = document.querySelector('#celebration');
-    let scattered = false;
-    function flee() {
-      const pad = 24, rect = no.getBoundingClientRect(), maxX = innerWidth - no.offsetWidth - pad, maxY = innerHeight - no.offsetHeight - pad;
-      const currentX = Number.isFinite(parseFloat(no.style.left)) ? parseFloat(no.style.left) : rect.left;
-      const currentY = Number.isFinite(parseFloat(no.style.top)) ? parseFloat(no.style.top) : rect.top;
-      const dx = (Math.random() > .5 ? 1 : -1) * (95 + Math.random() * 70), dy = (Math.random() > .5 ? 1 : -1) * (35 + Math.random() * 55);
-      no.style.position = 'fixed'; no.style.transition = 'left .7s cubic-bezier(.22,.8,.25,1), top .7s cubic-bezier(.22,.8,.25,1), transform .7s ease';
-      no.style.left = Math.min(maxX, Math.max(pad, currentX + dx)) + 'px'; no.style.top = Math.min(maxY, Math.max(pad, currentY + dy)) + 'px';
-      no.style.transform = `rotate(${Math.random()*10-5}deg)`; scattered = true; hint.textContent = 'The “No” button is feeling a little shy…';
-    }
-    no.addEventListener('pointerenter', flee); no.addEventListener('pointerdown', e => { e.preventDefault(); flee(); }); no.addEventListener('focus', flee);
-    yes.addEventListener('click', () => { celebration.classList.add('show'); hint.textContent = 'Best. answer. ever.'; no.style.display = 'none'; for(let i=0;i<28;i++){ const heart=document.createElement('span'); heart.className='heart'; heart.textContent=['♥','♡','✦'][i%3]; heart.style.left=(45+Math.random()*10)+'%'; heart.style.bottom='24%'; heart.style.color=i%2?'#ff4f87':'#f5b222'; heart.style.animationDelay=(i*.045)+'s'; sky.append(heart); setTimeout(()=>heart.remove(),3300); } });
-  </script>
-</body>
-</html>
 
-
-.illustration { position:absolute; width:clamp(90px,13vw,170px); filter:drop-shadow(0 14px 13px rgba(99,59,125,.18)); pointer-events:none; animation:float 5.5s ease-in-out infinite alternate; } .heart-cloud { top:6%; right:25%; } .ring { bottom:4%; left:24%; animation-delay:-2s; }
+      .illustration { position:absolute; width:clamp(90px,13vw,170px); filter:drop-shadow(0 14px 13px rgba(99,59,125,.18)); pointer-events:none; animation:float 5.5s ease-in-out infinite alternate; } .heart-cloud { top:6%; right:25%; } .ring { bottom:4%; left:24%; animation-delay:-2s; }
     .cloud-code { z-index:-1; pointer-events:none; white-space:nowrap; padding:6px 9px; border-radius:12px; font-size:clamp(8px,1vw,11px); opacity:.38; }
     .card { width:min(590px,90vw); padding:58px 42px 43px; text-align:center; border:1px solid rgba(255,255,255,.92); border-radius:34px; background:rgba(255,255,255,.54); box-shadow:0 30px 70px rgba(70,43,108,.23),inset 0 1px rgba(255,255,255,.9); backdrop-filter:blur(14px); position:relative; }
     .hint { margin:13px 0 0; font:italic 13px Arial,sans-serif; color:#967b9e; }
@@ -96,3 +75,26 @@
       sky.insertBefore(chip, document.querySelector('.card'));
     }
     let scattered = false;
+
+      <div class="celebration" id="celebration">You just made my whole universe sparkle! ✨<br>Our forever begins now. ♡</div>
+    </section>
+  </main>
+  <script>
+    const no = document.querySelector('#no'), yes = document.querySelector('#yes'), sky = document.querySelector('#sky'), hint = document.querySelector('#hint'), celebration = document.querySelector('#celebration');
+    let scattered = false;
+    function flee() {
+      const pad = 24, rect = no.getBoundingClientRect(), maxX = innerWidth - no.offsetWidth - pad, maxY = innerHeight - no.offsetHeight - pad;
+      const currentX = Number.isFinite(parseFloat(no.style.left)) ? parseFloat(no.style.left) : rect.left;
+      const currentY = Number.isFinite(parseFloat(no.style.top)) ? parseFloat(no.style.top) : rect.top;
+      const dx = (Math.random() > .5 ? 1 : -1) * (95 + Math.random() * 70), dy = (Math.random() > .5 ? 1 : -1) * (35 + Math.random() * 55);
+      no.style.position = 'fixed'; no.style.transition = 'left .7s cubic-bezier(.22,.8,.25,1), top .7s cubic-bezier(.22,.8,.25,1), transform .7s ease';
+      no.style.left = Math.min(maxX, Math.max(pad, currentX + dx)) + 'px'; no.style.top = Math.min(maxY, Math.max(pad, currentY + dy)) + 'px';
+      no.style.transform = `rotate(${Math.random()*10-5}deg)`; scattered = true; hint.textContent = 'The “No” button is feeling a little shy…';
+    }
+    no.addEventListener('pointerenter', flee); no.addEventListener('pointerdown', e => { e.preventDefault(); flee(); }); no.addEventListener('focus', flee);
+    yes.addEventListener('click', () => { celebration.classList.add('show'); hint.textContent = 'Best. answer. ever.'; no.style.display = 'none'; for(let i=0;i<28;i++){ const heart=document.createElement('span'); heart.className='heart'; heart.textContent=['♥','♡','✦'][i%3]; heart.style.left=(45+Math.random()*10)+'%'; heart.style.bottom='24%'; heart.style.color=i%2?'#ff4f87':'#f5b222'; heart.style.animationDelay=(i*.045)+'s'; sky.append(heart); setTimeout(()=>heart.remove(),3300); } });
+  </script>
+</body>
+</html>
+
+
