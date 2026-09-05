@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="A gold engagement ring">
+ <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#b97b11"/><stop offset=".5" stop-color="#ffdf78"/><stop offset="1" stop-color="#a66a0a"/></linearGradient></defs>
+ <circle cx="90" cy="105" r="48" fill="none" stroke="url(#g)" stroke-width="16"/>
+ <path d="m62 64 28-43 28 43-28 16z" fill="#dff9ff" stroke="#bda4e9" stroke-width="5"/><path d="m62 64 28 16 28-16" fill="none" stroke="#bda4e9" stroke-width="4"/>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" role="img" aria-label="A heart floating in a cloud">
+  <defs><linearGradient id="h" x1="0" x2="1"><stop stop-color="#ff91b5"/><stop offset="1" stop-color="#df4f88"/></linearGradient></defs>
+  <path d="M27 111c-22 0-34-26-18-43 10-11 30-10 39 1 2-28 41-35 53-9 14-19 48-12 51 14 11-10 31-7 39 5 14 20-1 42-22 40H27Z" fill="#fff" fill-opacity=".82"/>
+  <path d="M108 36c-15-18-45-7-39 16 5 22 39 42 39 42s34-20 39-42c6-23-24-34-39-16Z" fill="url(#h)"/>
+</svg>
